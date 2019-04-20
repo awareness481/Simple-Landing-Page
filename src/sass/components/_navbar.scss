@@ -1,0 +1,17 @@
+.nav-wrapper {
+    background-color: #fff;
+
+    .brand-logo {
+        color: #000;
+    }
+
+    .signin {
+        .btn {
+            background-color: $main-blue;
+
+            &:hover {
+                background-color: $lt-blue;
+            }
+        }
+    }
+}
