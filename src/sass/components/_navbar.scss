@@ -1,8 +1,15 @@
+$menu-pos: 5rem;
+
 .nav-wrapper {
     background-color: #fff;
 
     .brand-logo {
         color: #000;
+        left: $menu-pos;
+    }
+
+    .signin-btn {
+        right: $menu-pos;
     }
 
     .signin {
