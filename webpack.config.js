@@ -1,22 +1,22 @@
-const path = require('path');
-const nodeExternals = require('webpack-node-externals');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
+const nodeExternals = require("webpack-node-externals");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: { main: './main.js' },
+  entry: { main: "./main.js" },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.js"
   },
-  target: 'node', 
+  target: "node",
   externals: [nodeExternals()],
   plugins: [
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: '[name].css',
-      chunkFilename: '[id].css',
-    }),
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    })
   ],
   module: {
     rules: [
@@ -33,14 +33,18 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: process.env.NODE_ENV === 'development',
-            },
+              hmr: process.env.NODE_ENV === "development"
+            }
           },
-          'css-loader',
-          
-          'sass-loader',
-        ],
+          "css-loader",
+
+          "sass-loader"
+        ]
       },
-    ],
-  },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: ["file-loader"]
+      }
+    ]
+  }
 };
