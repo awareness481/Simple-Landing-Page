@@ -1,0 +1,44 @@
+.h4-people {
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin: 15vh 0;
+}
+
+.testimonials {
+    margin: 10vh auto 0 auto;
+ 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+
+    .testimony-logo {
+        height: 30vh;
+        width: 30vh;
+        box-shadow: 0 5px 5px 0 rgba(0.60,0.69,0.76, 0.4);
+    }
+}
+
+@media (max-width: 760px) {
+
+    .h4-people {
+        margin: 25vh 0 0 0;
+    }
+
+    .testimonials {
+        margin: 5vh auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        .testimony-logo {
+            height: 25vh;
+            width: 25vh;
+        }
+    }
+
+
+
+}
