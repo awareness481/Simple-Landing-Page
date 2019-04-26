@@ -1,0 +1,90 @@
+
+
+.get-started {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    margin-top: 10vh;
+    background-image: url('../../dist/assets/james-2.png');
+    background-size: 100% 100%;
+
+
+    .get-started-form {
+        position:absolute;
+        left:50%;
+        top:50%;
+    
+        transform: translate(-50%,-50%);
+
+        .get-started-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 70vw;
+        
+        margin: 0 auto;
+        line-height: 3rem;
+        text-align: center;
+
+        .get-started-signup {
+            margin-top: 3rem;
+
+
+            .get-started-form-input {
+                margin-right: 1rem;
+                height: 7vh;
+                min-height: 7vh;
+                width: 50%;
+                background-color: white;
+                border-radius: 0.5rem;
+        }
+    }
+
+    .btn-signup {
+        height: 7vh;
+        min-height: 7vh;
+        border-radius: 0.5rem;
+        vertical-align: top;
+
+        background-color: $main-blue;
+         &:hover {
+             background-color: $lt-blue;
+         }
+    }
+    }
+}
+
+@media (max-width: 760px) {
+    .get-started {
+        height: 60vh;
+        
+
+        .get-started-form {
+            width: 90vw;
+    
+            .get-started-signup {
+                .get-started-form-input {
+                    width: 80%;
+                    height: 5vh;
+                    min-height: 5vh;
+                    margin-right: 0;
+                }
+            }
+    
+            .btn-signup {
+                width: 80%;
+                height: 5vh;
+                min-height: 5vh;
+            }
+        }
+    }
+    
+
+}
